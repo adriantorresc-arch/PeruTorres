@@ -7,17 +7,11 @@ app.use("/img", express.static(__dirname + "/img"));
 app.use("/js", express.static(__dirname + "/js"));
 
 let conexion=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    database:"peru",
-    password:clearCache
-    /*
     host: process.env.MYSQLHOST,
     port: process.env.MYSQLPORT,
     database: process.env.MYSQLDATABASE,
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD
-    */
 });
 app.set("view engine", "ejs");
 app.use(express.json());
